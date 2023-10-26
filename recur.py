@@ -13,7 +13,7 @@ def send_whatsapp_message(msg: str):
             category = 'happiness'
             now = datetime.datetime.now()
             api_url = 'https://api.api-ninjas.com/v1/quotes?category={}'.format(category)
-            response = requests.get(api_url, headers={'X-Api-Key': 'cXUC+qdzNSj20vmC9usDYg==LCRiOXYagcWJxTgb'})
+            response = requests.get(api_url, headers={'X-Api-Key': 'your api key'})
             message = f"{msg} Current time is {now.strftime('%Y-%m-%d %H:%M:%S')}. Quote of the day: {response.text}"
             pywhatkit.sendwhatmsg_to_group_instantly(
                 "SMS",
